@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primer clase reactjs </title>
+
+    <style>
+        picture {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            width: 100px;
+            margin-bottom: 10px;
+        }
+        img {
+            border-radius: 50%;
+            box-shadow: 0 0 15px #555;
+            margin-bottom: 10px;
+        }
+        .disabled {
+            opacity: 0.5;
+        }
+    </style>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+
+    <h1>Comision 31855</h1>
+
+    <p>parafo</p>
+    
+    <!-- <picture class="picture">
+        <img id="img" src="https://randomuser.me/api/portraits/lego/8.jpg" alt="lego">
+        <p>nombre</p>
+    </picture>
+     -->
+
+    <div id="root"></div>
+
+
+    <script type="text/babel">
+
+        const app = document.getElementById("root")
+        console.log(app)
+
+        const r = React.createElement
+
+        const avatar = () => {
+
+            const src = "https://randomuser.me/api/portraits/lego/5.jpg"
+        
+
+            return r("picture", {}, [r("img", {src, alt: "lego"}), r("p", {}, "lego")])
+        }
+
+       
+
+        const avatarJSX = () => {
+
+            const src = "https://randomuser.me/api/portraits/lego/2.jpg"
+
+
+            return (
+                <pciture>
+                    <img src={src} alt="Lego"/>
+                    <p>Lego</p>
+                </pciture>
+
+            )
+        }
+        ReactDOM.render(r(avatarJSX), app)
+
+
+
+
+
+
+       /* const app = document.getElementById("root")
+        console.log(app)
+
+        const avatar = (params) => {
+            console.log(params)
+         return `
+            picture class="picture">
+            <img id="img" src="https://randomuser.me/api/portraits/lego/${params.id}.jpg" alt="lego">
+            <p>${params.name}</p>
+            </picture>
+            `
+        }
+        app.innerHTML = avatar({id: 1, name:"lego 1"})
+        app.innerHTML += avatar({id: 2, name:"lego 2"})*/
+       
+
+
+
+        document.querySelectorAll("img").forEach((img) => {
+            img.addEventListener("click", () => {
+                img.classList.toggle("disabled")
+            })
+
+        })  
+    </script>
+</body>
+</html>
