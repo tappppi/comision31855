@@ -1,11 +1,13 @@
-const navBar = () => {
+const Nav = () => {
     return (
-
-       /*  <header>
-            <h1>MiTienda</h1>
-            <img src={} />
-        </header>
- */
+        
+      /*   <div>
+            <header>
+                <h1>MiTienda</h1>
+                <img src={} />
+            </header>
+        </div>
+  */
         <nav>
 
             <button>Home</button>
