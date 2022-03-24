@@ -1,13 +1,8 @@
+import CartWidget from "./CartWidget/CartWidget"
+
 const Nav = () => {
     return (
-        
-      /*   <div>
-            <header>
-                <h1>MiTienda</h1>
-                <img src={} />
-            </header>
-        </div>
-  */
+    
         <nav>
 
             <button>Home</button>
@@ -15,8 +10,11 @@ const Nav = () => {
             <button>Contacto</button>
             <button>Instagram</button>
             <button>Cambio-Devolucion</button>
+            <CartWidget/>
 
         </nav>
+
+
     )
 }
 export default navBar
