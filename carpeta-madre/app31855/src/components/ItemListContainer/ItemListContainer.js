@@ -3,7 +3,7 @@ import { useState, useEffect} from "react"
 //import Itemlist from "./components/ItemList/Itemlist"
 const ItemListContainer = ({greeting}) => {
 
-    const [prodcuts, setProducts] = useState([])
+    const [products, setProducts] = useState([])
     const [search, setSearch] = useState("")
 
 
@@ -49,7 +49,10 @@ const ItemListContainer = ({greeting}) => {
             <ul>
                 {products.map(product => <img key={product.id} src={product.tumbnail} alt= "img"></img>)}
             </ul>
-            <Itemlist products = {products} />
+            
+                
+            {/* <Itemlist products = {products} />  */}
+
         </div>
     )
 
