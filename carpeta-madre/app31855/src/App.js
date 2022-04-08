@@ -1,8 +1,6 @@
-//import logo from './logo.svg';
-
 import ItemCount from './components/ItemCount/ItemCount';
 import './App.css';
-import Nav from "components.js"
+import Nav from "./components/Navbar/Nav"
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
 function App() {
@@ -20,7 +18,7 @@ function App() {
 
       <Nav/>
       <ItemListContainer greeting={"Hola comision 31855!"}/>
-      <itemCount intial={1} stock={20} onAdd={onAdd}/>
+      <ItemCount intial={1} stock={20} onAdd={onAdd}/>
 
 
     </div>

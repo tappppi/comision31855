@@ -1,6 +1,6 @@
 import { getProduct } from "../../asymock"
 import { useState, useEffect} from "react"
-import Itemlist from "../ItemList"
+//import Itemlist from "./components/ItemList/Itemlist"
 const ItemListContainer = ({greeting}) => {
 
     const [prodcuts, setProducts] = useState([])
