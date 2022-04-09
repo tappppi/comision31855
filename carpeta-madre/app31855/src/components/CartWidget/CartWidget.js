@@ -1,11 +1,17 @@
+
+
+
 const CartWidget = () => {
 
     return (
-        <div>
-           <img />
-           3
-        </div>
+
+
+        <link to ={"/"} className = "Cartwidget">
+            <img src ="/" alt="carrito" />
+        </link>
+    
     )
+
 }
 
 export default CartWidget

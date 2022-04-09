@@ -1,4 +1,4 @@
-import { getProduct } from "../../asymock"
+//import { getProduct } from "../../asymock"
 import { useState, useEffect} from "react"
 //import Itemlist from "./components/ItemList/Itemlist"
 const ItemListContainer = ({greeting}) => {
@@ -7,6 +7,24 @@ const ItemListContainer = ({greeting}) => {
     const [search, setSearch] = useState("")
 
 
+
+    const onResize = () => {
+
+
+    console.log("cambio el tamaño de la pantalla")
+
+
+}
+
+useEffect(()=> {
+
+    window.addEventListener("resize", onResize )
+
+    return (()=> {
+        window.removeEventListener("resize", onResize)
+    })
+
+})
 
 
     /* useEffect(() =>{
@@ -57,5 +75,9 @@ const ItemListContainer = ({greeting}) => {
     )
 
 }
+
+
+
+
 
 export default ItemListContainer
