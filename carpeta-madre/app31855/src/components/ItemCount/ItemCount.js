@@ -1,20 +1,19 @@
-//import {useState} from "react"
+import {useState} from "react"
 
-const itemCount = ({initial = 0, stock, onAdd}) => {
-    const [count, setCount] = useState(initial)
+const ItemCount = ({initial = 0, stock, onAdd}) => {
+    const [count, Setcount] = useState(initial)
 
 
     const increment = () => {
         if(count < stock ){
-            setCount(count + 1)
+            Setcount(count + 1)
         }
 
         
     }
 
     const decrement = () => {
-
-        setcount(count - 1)
+ Setcount(count - 1)
     }
     
     console.log("2 se va a montar en la pantalla del componente")
@@ -29,4 +28,4 @@ const itemCount = ({initial = 0, stock, onAdd}) => {
     )
 }
 
-export default itemCount
+export default ItemCount
